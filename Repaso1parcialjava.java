@@ -25,6 +25,7 @@ public class Repaso1parcialjava{
             System.out.println("10. Calculadora básica (Suma, Resta, Multiplicación)");
             System.out.println("11. Mayor, menor y diferencia absoluta");
             System.out.println("12. Tabla de división del 1 al 10");
+            System.out.println("13. Contar cantidad de dígitos pares"); 
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -43,6 +44,7 @@ public class Repaso1parcialjava{
                 case 10: calculadoraBasica(sc); break;
                 case 11: analisisNumerico(sc); break;
                 case 12: tablaDivision(sc); break;
+                case 13: contarDigitosPares(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -213,7 +215,26 @@ public class Repaso1parcialjava{
             }
         }
     }
-    
+ // EJERCICIO 13
+    public static void contarDigitosPares(Scanner sc) {
+        System.out.print("Ingrese un número entero: ");
+        int n = Math.abs(sc.nextInt());
+        int contador = 0;
+        
+        // Manejo especial si el número es 0
+        if (n == 0) {
+            contador = 1;
+        } else {
+            while (n > 0) {
+                int digito = n % 10;
+                if (digito % 2 == 0) {
+                    contador++;
+                }
+                n /= 10;
+            }
+        }
+        System.out.println("La cantidad de dígitos pares es: " + contador);
+    }
 }
 
 
