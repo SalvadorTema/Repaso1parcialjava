@@ -23,6 +23,7 @@ public class Repaso1parcialjava{
             System.out.println("8. Clasificador de hora (Mañana/Tarde/Noche)");
             System.out.println("9. Convertir 1-5 a Romano");
             System.out.println("10. Calculadora básica (Suma, Resta, Multiplicación)");
+            System.out.println("11. Mayor, menor y diferencia absoluta");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -39,6 +40,7 @@ public class Repaso1parcialjava{
                 case 8: clasificarHora(sc); break;
                 case 9: convertirARomano(sc); break;
                 case 10: calculadoraBasica(sc); break;
+                case 11: analisisNumerico(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -113,6 +115,7 @@ public class Repaso1parcialjava{
         System.out.println("La suma de los dígitos es: " + suma);
     }
  // --- MÉTODOS DE LOS EJERCICIOS DEL 6 AL 8 ---
+    //Parte 2 – Condiciones y Divisibilidad
     //EJERCICIO 6
     public static void verificarMultiplo(Scanner sc) {
         System.out.print("Ingrese número: ");
@@ -135,6 +138,7 @@ public class Repaso1parcialjava{
         }
         System.out.println();
     }
+    
   //EJERCICIO 8
     public static void clasificarHora(Scanner sc) {
         System.out.print("Ingrese hora (0-23): ");
@@ -144,6 +148,7 @@ public class Repaso1parcialjava{
         else if ((h >= 20 && h <= 23) || (h >= 0 && h <= 5)) System.out.println("Noche");
         else System.out.println("Hora no válida.");
     } 
+    // Parte 3 – Uso de switch
   //EJERCICIO 9
     public static void convertirARomano(Scanner sc) {
         System.out.print("Introduce un número del 1 al 5: ");
@@ -174,6 +179,26 @@ public class Repaso1parcialjava{
             default: System.out.println("Opción no válida.");
         }
     }
+     // ---Parte 4 – Análisis Numérico ---
+    // --- MÉTODOS DE LOS EJERCICIOS DEL 11 AL 15 ---
+ // EJERCICIO 11
+    public static void analisisNumerico(Scanner sc) {
+        System.out.print("Ingrese número a: ");
+        double a = sc.nextDouble();
+        System.out.print("Ingrese número b: ");
+        double b = sc.nextDouble();
+
+        double mayor = Math.max(a, b);
+        double menor = Math.min(a, b);
+        double diferencia = Math.abs(a - b);
+
+        System.out.println("Mayor: " + mayor);
+        System.out.println("Menor: " + menor);
+        System.out.println("Diferencia absoluta: " + diferencia);
+    }
+    
+    
+    
 }
 
 
