@@ -31,6 +31,7 @@ public class Repaso1parcialjava{
             System.out.println("16. Primeros n múltiplos de 6");
             System.out.println("17. ¿Es potencia de 2?");
             System.out.println("18. Número invertido");
+            System.out.println("19. Suma de 1 a n es par o impar");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -55,6 +56,7 @@ public class Repaso1parcialjava{
                 case 16: mostrarMultiplos6(sc); break;
                 case 17: esPotenciaDe2(sc); break;
                 case 18: invertirNumero(sc); break;
+                case 19: sumaParOImpar(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -310,6 +312,13 @@ public class Repaso1parcialjava{
             n /= 10;
         }
         System.out.println("Número invertido: " + invertido);
+    }
+ // EJERCICIO 19
+    public static void sumaParOImpar(Scanner sc) {
+        System.out.print("Ingrese n: ");
+        int n = sc.nextInt();
+        int suma = (n * (n + 1)) / 2;
+        System.out.println("La suma es " + suma + " y es " + (suma % 2 == 0 ? "Par" : "Impar"));
     }
 }
 
