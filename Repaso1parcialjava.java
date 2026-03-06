@@ -28,6 +28,7 @@ public class Repaso1parcialjava{
             System.out.println("13. Contar cantidad de dígitos pares"); 
             System.out.println("14. ¿Es un número triangular?");
             System.out.println("15. Promedio de números negativos");
+            System.out.println("16. Primeros n múltiplos de 6");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -49,7 +50,7 @@ public class Repaso1parcialjava{
                 case 13: contarDigitosPares(sc); break;
                 case 14: verificarTriangular(sc); break;
                 case 15: promedioNegativos(sc); break;
-                
+                case 16: mostrarMultiplos6(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -278,6 +279,15 @@ public class Repaso1parcialjava{
         } else {
             System.out.println("No hay negativos.");
         }
+    }
+    //Parte 5 – Patrones y Transformaciones
+ // --- MÉTODOS DE LOS EJERCICIOS DEL 16 AL 20 ---
+ // EJERCICIO 16
+    public static void mostrarMultiplos6(Scanner sc) {
+        System.out.print("Ingrese n: ");
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) System.out.print((i * 6) + " ");
+        System.out.println();
     }
 }
 
