@@ -29,6 +29,7 @@ public class Repaso1parcialjava{
             System.out.println("14. ¿Es un número triangular?");
             System.out.println("15. Promedio de números negativos");
             System.out.println("16. Primeros n múltiplos de 6");
+            System.out.println("17. ¿Es potencia de 2?");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -51,6 +52,7 @@ public class Repaso1parcialjava{
                 case 14: verificarTriangular(sc); break;
                 case 15: promedioNegativos(sc); break;
                 case 16: mostrarMultiplos6(sc); break;
+                case 17: esPotenciaDe2(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -288,6 +290,13 @@ public class Repaso1parcialjava{
         int n = sc.nextInt();
         for (int i = 1; i <= n; i++) System.out.print((i * 6) + " ");
         System.out.println();
+    }
+ // EJERCICIO 17
+    public static void esPotenciaDe2(Scanner sc) {
+        System.out.print("Ingrese un número: ");
+        int n = sc.nextInt();
+        if (n > 0 && (n & (n - 1)) == 0) System.out.println("Es potencia de 2.");
+        else System.out.println("No es potencia de 2.");
     }
 }
 
