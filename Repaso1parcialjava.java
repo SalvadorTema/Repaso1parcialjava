@@ -30,6 +30,7 @@ public class Repaso1parcialjava{
             System.out.println("15. Promedio de números negativos");
             System.out.println("16. Primeros n múltiplos de 6");
             System.out.println("17. ¿Es potencia de 2?");
+            System.out.println("18. Número invertido");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -53,6 +54,7 @@ public class Repaso1parcialjava{
                 case 15: promedioNegativos(sc); break;
                 case 16: mostrarMultiplos6(sc); break;
                 case 17: esPotenciaDe2(sc); break;
+                case 18: invertirNumero(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -297,6 +299,17 @@ public class Repaso1parcialjava{
         int n = sc.nextInt();
         if (n > 0 && (n & (n - 1)) == 0) System.out.println("Es potencia de 2.");
         else System.out.println("No es potencia de 2.");
+    }
+ // EJERCICIO 18
+    public static void invertirNumero(Scanner sc) {
+        System.out.print("Ingrese número: ");
+        int n = sc.nextInt();
+        int invertido = 0;
+        while(n != 0) {
+            invertido = invertido * 10 + n % 10;
+            n /= 10;
+        }
+        System.out.println("Número invertido: " + invertido);
     }
 }
 
