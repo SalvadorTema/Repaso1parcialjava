@@ -16,7 +16,7 @@ public class Repaso1parcialjava{
             System.out.println("2. Factorial de n (!n)");
             System.out.println("1. Suma de divisibles entre 4 (1 a n)");
             System.out.println("3. Contador Positivos, Negativos y Ceros");
-
+            System.out.println("4. Promedio de números pares (1 a n)");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -26,6 +26,7 @@ public class Repaso1parcialjava{
                 case 1: sumarDivisibles4(sc); break;
                 case 2: calcularFactorial(sc); break;
                 case 3: contarTiposNumeros(sc); break;
+                case 4: promedioPares(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -69,6 +70,24 @@ public class Repaso1parcialjava{
             else cero++;
         }
         System.out.println("\nResultados:\nPositivos: " + pos + "\nNegativos: " + neg + "\nCeros: " + cero);
+    }
+  //EJERCICIO 4
+    public static void promedioPares(Scanner sc) {
+        System.out.print("Ingrese n: ");
+        int n = sc.nextInt();
+        int suma = 0, contador = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                suma += i;
+                contador++;
+            }
+        }
+        if (contador > 0) {
+            double promedio = (double) suma / contador;
+            System.out.println("El promedio de pares es: " + promedio);
+        } else {
+            System.out.println("No se encontraron números pares.");
+        }
     }
 
 }
