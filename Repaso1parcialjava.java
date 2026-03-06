@@ -32,6 +32,7 @@ public class Repaso1parcialjava{
             System.out.println("17. ¿Es potencia de 2?");
             System.out.println("18. Número invertido");
             System.out.println("19. Suma de 1 a n es par o impar");
+            System.out.println("20. Celsius a Fahrenheit");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -57,6 +58,7 @@ public class Repaso1parcialjava{
                 case 17: esPotenciaDe2(sc); break;
                 case 18: invertirNumero(sc); break;
                 case 19: sumaParOImpar(sc); break;
+                case 20: convertirCelsiusAFahrenheit(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -66,6 +68,7 @@ public class Repaso1parcialjava{
     }
 
     // --- MÉTODOS DE LOS EJERCICIOS DEL 1 AL 5 ---
+    // Parte 1 – Ciclos y Operaciones Numéricas
     //EJERCICIO 1 
 
     public static void  sumarDivisibles4(Scanner sc) {
@@ -319,6 +322,12 @@ public class Repaso1parcialjava{
         int n = sc.nextInt();
         int suma = (n * (n + 1)) / 2;
         System.out.println("La suma es " + suma + " y es " + (suma % 2 == 0 ? "Par" : "Impar"));
+    }
+ // EJERCICIO 20
+    public static void convertirCelsiusAFahrenheit(Scanner sc) {
+        System.out.print("Ingrese grados Celsius: ");
+        double c = sc.nextDouble();
+        System.out.println("Fahrenheit: " + ((c * 9/5) + 32));
     }
 }
 
