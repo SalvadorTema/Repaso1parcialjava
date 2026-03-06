@@ -17,6 +17,7 @@ public class Repaso1parcialjava{
             System.out.println("1. Suma de divisibles entre 4 (1 a n)");
             System.out.println("3. Contador Positivos, Negativos y Ceros");
             System.out.println("4. Promedio de números pares (1 a n)");
+            System.out.println("5. Suma de dígitos de un número");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -27,6 +28,7 @@ public class Repaso1parcialjava{
                 case 2: calcularFactorial(sc); break;
                 case 3: contarTiposNumeros(sc); break;
                 case 4: promedioPares(sc); break;
+                case 5: sumarDigitos(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -88,6 +90,17 @@ public class Repaso1parcialjava{
         } else {
             System.out.println("No se encontraron números pares.");
         }
+    }
+  //EJERCICIO 5
+    public static void sumarDigitos(Scanner sc) {
+        System.out.print("Ingrese un número entero: ");
+        int n = Math.abs(sc.nextInt()); // Math.abs por si ingresan negativos
+        int suma = 0;
+        while (n > 0) {
+            suma += n % 10; // Extrae el último dígito
+            n /= 10;        // Elimina el último dígitos
+        }
+        System.out.println("La suma de los dígitos es: " + suma);
     }
 
 }
