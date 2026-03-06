@@ -26,6 +26,7 @@ public class Repaso1parcialjava{
             System.out.println("11. Mayor, menor y diferencia absoluta");
             System.out.println("12. Tabla de división del 1 al 10");
             System.out.println("13. Contar cantidad de dígitos pares"); 
+            System.out.println("14. ¿Es un número triangular?");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -45,6 +46,7 @@ public class Repaso1parcialjava{
                 case 11: analisisNumerico(sc); break;
                 case 12: tablaDivision(sc); break;
                 case 13: contarDigitosPares(sc); break;
+                case 14: verificarTriangular(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -234,6 +236,23 @@ public class Repaso1parcialjava{
             }
         }
         System.out.println("La cantidad de dígitos pares es: " + contador);
+    }
+ // EJERCICIO 14
+    public static void verificarTriangular(Scanner sc) {
+        System.out.print("Ingrese un número n para saber si es triangular: ");
+        int n = sc.nextInt();
+        int suma = 0, k = 1;
+        
+        while (suma < n) {
+            suma += k;
+            k++;
+        }
+        
+        if (suma == n) {
+            System.out.println(n + " es un número triangular.");
+        } else {
+            System.out.println(n + " NO es un número triangular.");
+        }
     }
 }
 
