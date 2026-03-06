@@ -27,6 +27,7 @@ public class Repaso1parcialjava{
             System.out.println("12. Tabla de división del 1 al 10");
             System.out.println("13. Contar cantidad de dígitos pares"); 
             System.out.println("14. ¿Es un número triangular?");
+            System.out.println("15. Promedio de números negativos");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -47,6 +48,8 @@ public class Repaso1parcialjava{
                 case 12: tablaDivision(sc); break;
                 case 13: contarDigitosPares(sc); break;
                 case 14: verificarTriangular(sc); break;
+                case 15: promedioNegativos(sc); break;
+                
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -252,6 +255,28 @@ public class Repaso1parcialjava{
             System.out.println(n + " es un número triangular.");
         } else {
             System.out.println(n + " NO es un número triangular.");
+        }
+    }
+ // EJERCICIO 15
+    public static void promedioNegativos(Scanner sc) {
+        System.out.print("¿Cuántos números va a ingresar?: ");
+        int n = sc.nextInt();
+        double sumaNegativos = 0;
+        int contadorNegativos = 0;
+        
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Ingrese número " + i + ": ");
+            double num = sc.nextDouble();
+            if (num < 0) {
+                sumaNegativos += num;
+                contadorNegativos++;
+            }
+        }
+        
+        if (contadorNegativos > 0) {
+            System.out.println("El promedio de los negativos es: " + (sumaNegativos / contadorNegativos));
+        } else {
+            System.out.println("No hay negativos.");
         }
     }
 }
