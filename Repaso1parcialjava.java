@@ -1,4 +1,4 @@
-package ejercicios; // Asegúrate que este nombre coincida con el que pusiste en "Package"
+package ejercicios; 
 
 import java.util.Scanner;
 
@@ -10,6 +10,7 @@ public class Repaso1parcialjava{
 
         do {
         	//Menu Enumerado
+        	
             System.out.println("\n========================================");
             System.out.println("   MENÚ DE EJERCICIOS 1-20");
             System.out.println("========================================");
