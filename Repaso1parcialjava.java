@@ -19,6 +19,7 @@ public class Repaso1parcialjava{
             System.out.println("4. Promedio de números pares (1 a n)");
             System.out.println("5. Suma de dígitos de un número");
             System.out.println("6. ¿Es múltiplo de 7 o 11?");
+            System.out.println("7. Divisibles entre 3 pero no entre 2");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -31,6 +32,7 @@ public class Repaso1parcialjava{
                 case 4: promedioPares(sc); break;
                 case 5: sumarDigitos(sc); break;
                 case 6: verificarMultiplo(sc); break;
+                case 7: mostrarDivisibles(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -114,6 +116,18 @@ public class Repaso1parcialjava{
         } else {
             System.out.println(n + " NO es múltiplo ni de 7 ni de 11.");
         }
+    }
+  //EJERCICIO 7
+    public static void mostrarDivisibles(Scanner sc) {
+        System.out.print("Ingrese n: ");
+        int n = sc.nextInt();
+        System.out.print("Números: ");
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
     }
 
 }
