@@ -22,6 +22,7 @@ public class Repaso1parcialjava{
             System.out.println("7. Divisibles entre 3 pero no entre 2");
             System.out.println("8. Clasificador de hora (Mañana/Tarde/Noche)");
             System.out.println("9. Convertir 1-5 a Romano");
+            System.out.println("10. Calculadora básica (Suma, Resta, Multiplicación)");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -37,6 +38,7 @@ public class Repaso1parcialjava{
                 case 7: mostrarDivisibles(sc); break;
                 case 8: clasificarHora(sc); break;
                 case 9: convertirARomano(sc); break;
+                case 10: calculadoraBasica(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -153,6 +155,23 @@ public class Repaso1parcialjava{
             case 4: System.out.println("IV"); break;
             case 5: System.out.println("V"); break;
             default: System.out.println("Número fuera de rango.");
+        }
+    }
+ // EJERCICIO 10
+    public static void calculadoraBasica(Scanner sc) {
+        System.out.println("1: Sumar, 2: Restar, 3: Multiplicar");
+        System.out.print("Elija una opción (1-3): ");
+        int opcionCalc = sc.nextInt();
+        System.out.print("Ingrese el primer número: ");
+        double n1 = sc.nextDouble();
+        System.out.print("Ingrese el segundo número: ");
+        double n2 = sc.nextDouble();
+
+        switch (opcionCalc) {
+            case 1: System.out.println("Resultado: " + (n1 + n2)); break;
+            case 2: System.out.println("Resultado: " + (n1 - n2)); break;
+            case 3: System.out.println("Resultado: " + (n1 * n2)); break;
+            default: System.out.println("Opción no válida.");
         }
     }
 }
