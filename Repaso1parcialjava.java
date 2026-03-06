@@ -21,6 +21,7 @@ public class Repaso1parcialjava{
             System.out.println("6. ¿Es múltiplo de 7 o 11?");
             System.out.println("7. Divisibles entre 3 pero no entre 2");
             System.out.println("8. Clasificador de hora (Mañana/Tarde/Noche)");
+            System.out.println("9. Convertir 1-5 a Romano");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -35,6 +36,7 @@ public class Repaso1parcialjava{
                 case 6: verificarMultiplo(sc); break;
                 case 7: mostrarDivisibles(sc); break;
                 case 8: clasificarHora(sc); break;
+                case 9: convertirARomano(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -140,6 +142,19 @@ public class Repaso1parcialjava{
         else if ((h >= 20 && h <= 23) || (h >= 0 && h <= 5)) System.out.println("Noche");
         else System.out.println("Hora no válida.");
     } 
+  //EJERCICIO 9
+    public static void convertirARomano(Scanner sc) {
+        System.out.print("Introduce un número del 1 al 5: ");
+        int n = sc.nextInt();
+        switch (n) {
+            case 1: System.out.println("I"); break;
+            case 2: System.out.println("II"); break;
+            case 3: System.out.println("III"); break;
+            case 4: System.out.println("IV"); break;
+            case 5: System.out.println("V"); break;
+            default: System.out.println("Número fuera de rango.");
+        }
+    }
 }
 
 
