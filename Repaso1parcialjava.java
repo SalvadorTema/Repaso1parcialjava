@@ -18,6 +18,7 @@ public class Repaso1parcialjava{
             System.out.println("3. Contador Positivos, Negativos y Ceros");
             System.out.println("4. Promedio de números pares (1 a n)");
             System.out.println("5. Suma de dígitos de un número");
+            System.out.println("6. ¿Es múltiplo de 7 o 11?");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -29,6 +30,7 @@ public class Repaso1parcialjava{
                 case 3: contarTiposNumeros(sc); break;
                 case 4: promedioPares(sc); break;
                 case 5: sumarDigitos(sc); break;
+                case 6: verificarMultiplo(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -101,6 +103,17 @@ public class Repaso1parcialjava{
             n /= 10;        // Elimina el último dígitos
         }
         System.out.println("La suma de los dígitos es: " + suma);
+    }
+ // --- MÉTODOS DE LOS EJERCICIOS DEL 6 AL 8 ---
+    //EJERCICIO 6
+    public static void verificarMultiplo(Scanner sc) {
+        System.out.print("Ingrese número: ");
+        int n = sc.nextInt();
+        if (n % 7 == 0 || n % 11 == 0) {
+            System.out.println(n + " es múltiplo de 7 o de 11.");
+        } else {
+            System.out.println(n + " NO es múltiplo ni de 7 ni de 11.");
+        }
     }
 
 }
