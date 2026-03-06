@@ -24,6 +24,7 @@ public class Repaso1parcialjava{
             System.out.println("9. Convertir 1-5 a Romano");
             System.out.println("10. Calculadora básica (Suma, Resta, Multiplicación)");
             System.out.println("11. Mayor, menor y diferencia absoluta");
+            System.out.println("12. Tabla de división del 1 al 10");
             System.out.println("0. Salir");
             System.out.print("\nElija una opción: ");
             
@@ -41,6 +42,7 @@ public class Repaso1parcialjava{
                 case 9: convertirARomano(sc); break;
                 case 10: calculadoraBasica(sc); break;
                 case 11: analisisNumerico(sc); break;
+                case 12: tablaDivision(sc); break;
                 case 0: System.out.println("Saliendo... ¡Buen trabajo!"); break;
                 default: System.out.println("Opción inválida.");
             }
@@ -197,7 +199,20 @@ public class Repaso1parcialjava{
         System.out.println("Diferencia absoluta: " + diferencia);
     }
     
-    
+ // EJERCICIO 12
+    public static void tablaDivision(Scanner sc) {
+        System.out.print("Ingrese un número n para su tabla de división: ");
+        double n = sc.nextDouble();
+        
+        if (n == 0) {
+            System.out.println("No se puede dividir entre cero.");
+        } else {
+            System.out.println("Tabla de división de " + n + ":");
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(n + " / " + i + " = " + (n / i));
+            }
+        }
+    }
     
 }
 
